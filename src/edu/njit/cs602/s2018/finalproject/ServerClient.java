@@ -1,6 +1,13 @@
 package edu.njit.cs602.s2018.finalproject;
+import jdk.internal.util.xml.impl.Input;
+import jdk.nashorn.internal.objects.annotations.Constructor;
 
-public interface ServerClient {
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public interface ServerClient extends Runnable {
 
     //listenForClientConnection()
     //ListenFor/PushPublishedData()
@@ -20,6 +27,28 @@ public interface ServerClient {
     *
     *
     * */
+
+    /*
+    * Calls ServerSocket .accept() and waits for an incoming client socket
+    * Will instantiate ServerSocket to establish communication with a client
+    *
+    * */
+    void listenForConnection();
+
+    /*
+    * listens for client action and client data
+    *
+    * */
+    void listenForIncomingData(InputStream input);
+
+    void interpretData(InputStream input);
+
+    void sendMessageToClient(OutputStream output);
+
+    void maintainConnections(Socket sock);
+
+    void maintainClientIDs(Socket sock);
+
 
 
 
