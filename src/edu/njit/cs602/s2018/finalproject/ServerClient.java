@@ -43,6 +43,10 @@ public interface ServerClient extends Runnable {
 
     void interpretData(InputStream input);
 
+    /*
+    * will send data to client socket
+    *
+    * */
     void sendMessageToClient(OutputStream output);
 
     void maintainConnections(Socket sock);
