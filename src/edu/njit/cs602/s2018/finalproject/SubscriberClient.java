@@ -1,38 +1,62 @@
 package edu.njit.cs602.s2018.finalproject;
+import edu.njit.cs602.s2018.finalproject.SubUnsubTopics;
 
-public interface SubscriberClient {
+/**
+ * Created by Prajwal Sankar
+ */
+public class SubscriberClient implements ServerStatus {
 
-    /*
-    * checkConncetionStatus()
-    * checkCurrentSubscriber()
-    *
-    * */
-    public void establishConnection();
+	//Check whether server is up/down and display the status
+	public void getServerStatus(String stat) {
 
-    /*
-    * return available topics
-    * return topic (String)
-    * */
-    public String getTopicList();
+	}
 
-    /*
-     * return subsribed topics
-     * return topic (String)
-     * */
-    public String getSubscribedList();
+	//Validate the user if already present, make connection or if new, then prompt
+	public void validateUser(String name) {
+		
+	}
 
-    /*
-    * update (add) topic into list on Server
-    * */
-    public void subscribeToTopic();
-
-    /*
-     * update (remove) topic into list on Server
-     * */
-    public void unsubscribeFromTopic();
-    /*
-    * display help menu containing options
-    * */
-    public void helpMethod();
-
-}
+	//If server is up, user is new, get id from user and connect
+	public void connServer(String id) {		
+	}
+	
+	//Get the list of available topics
+	public void getAllTopics(String topics)
+	{
+		
+	}
+	
+	//Get the list of already subscribed topics
+	public void getSubTopics(String topics)
+	{
+		
+	}
+	
+	//Subscribe to a topic
+	public void subScribeTopic()
+	{
+		
+	}
+	//Unsubscribe from a topic
+	public void UnSubscribe()
+	{
+		
+	}
+	
+	//Display Help Menu
+	public void DisplayHelp()
+	{
+		
+	}
+	
+	//Waiting for other command and displaying the publishers message
+	public void PublisherMsgDisplay()
+	{
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		
+	}
+	}
