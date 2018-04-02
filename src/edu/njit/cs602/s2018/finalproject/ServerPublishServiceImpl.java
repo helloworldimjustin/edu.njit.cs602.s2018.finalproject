@@ -3,6 +3,11 @@ package edu.njit.cs602.s2018.finalproject;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Created by Justin Bullock
+ * Note: Return types, Parameter types and Data Structures may not be final
+ */
+
 public class ServerPublishServiceImpl<k> implements ServerPublishService {
 
     //Publisher Client

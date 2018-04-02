@@ -3,6 +3,11 @@ package edu.njit.cs602.s2018.finalproject;
 import java.net.Socket;
 import java.util.List;
 
+/**
+ * Created by Justin Bullock
+ * Note: Return types, Parameter types and Data Structures may not be final
+ */
+
 public class ServerImpl implements Server {
     //For storing and managing connections
     List<Socket> connectionsList;

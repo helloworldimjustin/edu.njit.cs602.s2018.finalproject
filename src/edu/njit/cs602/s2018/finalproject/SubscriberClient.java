@@ -3,6 +3,7 @@ import edu.njit.cs602.s2018.finalproject.SubUnsubTopics;
 
 /**
  * Created by Prajwal Sankar
+ * Note: Return types, Parameter types and Data Structures may not be final
  */
 public class SubscriberClient implements ServerStatus {
 

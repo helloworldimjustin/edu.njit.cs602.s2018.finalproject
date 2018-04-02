@@ -4,7 +4,9 @@ import java.net.Socket;
 
 /**
  * Created by Prajwal Sankar
+ * Note: Return types, Parameter types and Data Structures may not be final
  */
+
 public interface ServerStatus {
 
 	//Connect to the server==> To use connect explicitly
