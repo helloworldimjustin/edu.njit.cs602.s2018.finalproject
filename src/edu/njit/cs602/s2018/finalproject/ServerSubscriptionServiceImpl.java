@@ -10,6 +10,9 @@ import java.util.List;
 public class ServerSubscriptionServiceImpl {
     //Subscriber Client
     List<String> clientSubsrciptions;
+    //Subscriber Client persister
+    List<String> clientSubsrciptionsPersister;
+
 
 
     /*

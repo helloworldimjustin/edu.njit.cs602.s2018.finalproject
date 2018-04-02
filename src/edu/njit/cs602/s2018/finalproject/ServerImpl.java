@@ -13,8 +13,11 @@ public class ServerImpl implements Server {
     List<Socket> connectionsList;
     //For storing and managing userNames
     List<String> userNameList;
-    //For handling data passed into ServerSocket
-    ServerController controller;
+    //For persisting users
+    List<String> userNamePersister;
+    //For persisting connections
+    List<String> connectionPersister;
+
 
 
     /*
