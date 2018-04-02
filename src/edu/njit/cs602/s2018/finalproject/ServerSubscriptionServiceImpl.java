@@ -27,7 +27,7 @@ public class ServerSubscriptionServiceImpl {
      * */
     public void unsubscribeFromTopic(String topicName){}
     /*
-     * return topics from clientSubscriptions
+     * Return topics from clientSubscriptions
      * */
     public void getSubscriptions(){}
 

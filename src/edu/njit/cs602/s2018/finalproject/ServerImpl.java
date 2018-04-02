@@ -27,7 +27,7 @@ public class ServerImpl implements Server {
     public void startServer(){}
 
     /*
-     * Store connections in connectionsList
+     * store connections in connectionsList
      * @param Socket is the socket to be stored
      * */
     public void storeConnection(Socket sock){}
