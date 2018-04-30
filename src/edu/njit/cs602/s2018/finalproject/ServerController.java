@@ -15,7 +15,7 @@ public class ServerController {
      * use ServerPublishServiceImpl instance to store message in publishedMessages;
      * @param: String message to be stored
      * */
-    public void storeMessage(String message){ }
+    public void storeMessage(String message){}
 
     /*
      * use ServerPublishServiceImpl instance to send new message to all subscribers;
