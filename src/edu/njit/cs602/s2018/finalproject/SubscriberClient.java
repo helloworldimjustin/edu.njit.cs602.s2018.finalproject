@@ -204,7 +204,8 @@ public class SubscriberClient extends JavaGUI {
     /** Create socket, and receiving thread */
 	public static void main(String[] args) {
          String server = "127.0.0.1";
-         int port =5354;
+         //int port =5354;
+		int port = 3000;
          Scanner sc = new Scanner(System.in);
          System.out.println("Please enter the user name :");
          String user = sc.nextLine();
