@@ -1,4 +1,4 @@
-package edu.njit.cs602.s2018.finalproject;
+package advancedJava.CS602.testClasses;
 
 import java.util.List;
 import java.util.Map;
@@ -8,7 +8,7 @@ import java.util.Map;
  * Note: Return types, Parameter types and Data Structures may not be final
  */
 
-public class ServerPublishServiceImpl<k> implements ServerPublishService {
+public class ServerPublishServiceImpl<k> implements advancedJava.CS602.testClasses.ServerPublishService.ServerPublishService {
 
     //Publisher Client
     Map<k,String> publishedMessages;

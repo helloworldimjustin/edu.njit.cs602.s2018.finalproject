@@ -1,4 +1,4 @@
-package edu.njit.cs602.s2018.finalproject;
+package advancedJava.CS602.testClasses;
 
 /**
  * Created by Justin Bullock

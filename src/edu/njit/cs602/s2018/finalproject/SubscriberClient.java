@@ -225,16 +225,18 @@ public class SubscriberClient extends JavaGUI {
 
 	public static void main(String[] args) {
          String server = "127.0.0.1";
-         int port =5354;
-         Scanner sc = new Scanner(System.in);
-         System.out.println("Please enter the user name :");
-         String user = sc.nextLine();
+         //int port =5354;
+		int port = 4000;
+         //Scanner sc = new Scanner(System.in);
+         //System.out.println("Please enter the user name :");
+         //String user = sc.nextLine();
          //SubscriberClient sclient= new SubscriberClient();
-         Thread t1 =new Thread(new JavaGUI(user, server, port));
+		System.out.println("ServerFiles is down");
+         Thread t1 =new Thread(new JavaGUI("", server, port));
          t1.start();
-         System.out.println("Please enter the user name :");
-         String user2 = sc.nextLine();
-         Thread t2=new Thread(new JavaGUI(user2, server, port));
-         t2.start();
+         //System.out.println("Please enter the user name :");
+         //String user2 = sc.nextLine();
+         //Thread t2=new Thread(new JavaGUI(user2, server, port));
+         //t2.start();
      }
 	}

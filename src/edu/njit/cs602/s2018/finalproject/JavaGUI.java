@@ -7,7 +7,8 @@ import java.awt.List;
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -29,10 +30,44 @@ public class JavaGUI extends JFrame implements Runnable{
 	    	//Start(user);
 	    }
 	    public JavaGUI(){}
-	    public void run() 
+	    public void run1()
 	    {
 		      Start(this.username);
 	    }
+	public void run(){
+		try{
+			System.out.println("ServerFiles is up");
+			Socket sock = new Socket("127.0.0.1", 4000);// creat Socket obj to open receive data through a port on a specific host
+			DataOutputStream dos = new DataOutputStream(sock.getOutputStream());
+			DataInputStream dis = new DataInputStream(sock.getInputStream());
+
+
+
+			BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));//read from keyboard
+
+			String receiveMessage, sendMessage;
+			//while(sock.isConnected())
+			while(true)
+			{
+
+
+				//System.out.println("wait for response...");
+				receiveMessage = dis.readUTF();
+				System.out.println(receiveMessage);
+
+				//System.out.println("send a command...");
+				sendMessage = keyRead.readLine();  // keyboard reading
+				dos.writeUTF(sendMessage);
+
+
+
+
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
 	    
 	    public String addItems(String items) 
 	    {
@@ -68,16 +103,16 @@ public class JavaGUI extends JFrame implements Runnable{
 	        panel.setVisible(true); 
 	        
 	        //Label to display to server status
-	        l2=new JLabel("Server Up");
+	        l2=new JLabel("ServerFiles Up");
 	        JButton ConnectButton, SubscribeButton, UnsubscribeButton, ExitButton;
 	        
 	        //Label to display server status
 	        try {
 				if(((SubscriberClient) newobj).getServerStatus(serv1, portnum).contains("up"))
-					{l2.setText("Server Status: up");
+					{l2.setText("ServerFiles Status: up");
 			        panel.setVisible(true);
 					}
-				else l2.setText("Server Status: down");
+				else l2.setText("ServerFiles Status: down");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

@@ -1,4 +1,7 @@
-package edu.njit.cs602.s2018.finalproject;
+package advancedJava.CS602.testClasses;
+
+import advancedJava.CS602.testClasses.ServerPublishServiceImpl;
+import advancedJava.CS602.testClasses.ServerSubscriptionServiceImpl;
 
 /**
  * Created by Justin Bullock
